@@ -1,56 +1,46 @@
-\# Netflix Clone Deployment using Nginx
+\# Azure Resource Creation using Azure CLI
 
 
 
-This project is a simple Netflix landing page clone deployed using Nginx.
+This project demonstrates how to create Azure resources using Azure CLI.
 
 
 
-Technologies Used
+Resources Created
 
-\- HTML
+\- Resource Group
 
-\- CSS
-
-\- Linux
-
-\- Nginx
+\- Storage Account
 
 
 
-Steps to Deploy
+Tools Used
+
+\- Azure CLI
+
+\- Microsoft Azure
 
 
 
-1 Install nginx
+Commands Used
 
 
 
-sudo apt update
-
-sudo apt install nginx
+az login
 
 
 
-2 Copy project files
+az group create --name devopsRG --location centralindia
 
 
 
-sudo cp -r \* /var/www/html/
+az storage account create \\
 
+--name devopsstorage123 \\
 
+--resource-group devopsRG \\
 
-3 Restart nginx
+--location centralindia \\
 
-
-
-sudo systemctl restart nginx
-
-
-
-4 Open browser
-
-
-
-http://localhost
+--sku Standard\_LRS
 

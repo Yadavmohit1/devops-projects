@@ -1,0 +1,12 @@
+Login to Azure
+az login
+
+Create Resource Group
+az group create --name devopsRG --location centralindia
+
+Create Storage Account
+az storage account create \
+--name devopsstorage123 \
+--resource-group devopsRG \
+--location centralindia \
+--sku Standard_LRS
